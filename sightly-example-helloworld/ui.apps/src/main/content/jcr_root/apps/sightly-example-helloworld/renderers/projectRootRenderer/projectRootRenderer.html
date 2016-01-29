@@ -2,7 +2,8 @@
 <html>
 
 
-<head>
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+	<meta data-sly-call="${clientLib.all @ categories='sightly-example-helloworld.clientlib.helloworld'}" data-sly-unwrap></meta>
 	<title>Hello World</title>
 </head>
 
