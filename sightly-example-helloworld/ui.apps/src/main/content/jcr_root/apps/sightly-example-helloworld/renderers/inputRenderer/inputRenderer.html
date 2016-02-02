@@ -4,14 +4,14 @@
 
 <head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
 	<meta data-sly-call="${clientLib.all @ categories='sightly-example-helloworld.clientlib.helloworld'}" data-sly-unwrap></meta>
+	<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap/>
 	<title>Hello World - Input</title>
 </head>
 
 
 <body>
 	<div class="page">
-		Page
-		<!--  cq:include path="par" resourceType="aem-example-helloworld/components/parsys/emptyTextParsys"/ -->
+		<div class="page__par" data-sly-resource="par"></div>
 	</div>		
 </body>
 

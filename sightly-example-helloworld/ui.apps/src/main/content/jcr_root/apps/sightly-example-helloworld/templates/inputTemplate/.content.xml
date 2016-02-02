@@ -12,8 +12,11 @@
     ranking="{Long}1">
     
     <jcr:content
-    	cq:designPath="/etc/designs/webapp"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="sightly-example-helloworld/renderers/inputRenderer"/>
-                
+        sling:resourceType="sightly-example-helloworld/renderers/inputRenderer">
+    	<par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+        </par>    
+    </jcr:content>            
 </jcr:root>
