@@ -13,7 +13,7 @@
     ranking="{Long}1">
     
     <jcr:content
-    	cq:designPath="/etc/designs/webapp"
+    	cq:designPath="/etc/designs/sightly-example-helloworld"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="sightly-example-helloworld/renderers/languageRootRenderer"/>
                 
