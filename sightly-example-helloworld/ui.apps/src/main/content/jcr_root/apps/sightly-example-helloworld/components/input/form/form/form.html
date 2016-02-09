@@ -1,0 +1,20 @@
+<form data-sly-use.model="pl.kwi.core.models.InputFormModel" method="POST" action="servlet.INPUT.html">
+	<input type="hidden" name="submitTarget" value="${model.submitTarget}"/>
+	
+	<div data-sly-test="${!model.submitTarget}" class="errorMessages">
+		Please fill mandatory form`s field: "Submit target"			
+	</div>
+	
+	<!-- c:set var="modelContent" value="<%=FormUtil.getModelWithResultComponentExist(resource, "formParsys/content")%>"/>                 
+	<c:if test="${!modelContent.componentExists}">
+		<div class="errorMessages">Please add mandatory form`s component: "Form - Content"</div>
+	</c:if>
+	
+	<c:set var="modelSubmit" value="<%=FormUtil.getModelWithResultComponentExist(resource, "formParsys/submit")%>"/>                 
+	<c:if test="${!modelSubmit.componentExists}">
+		<div class="errorMessages">Please add mandatory form`s component: "Form - Submit button"</div>
+	</c:if -->	 
+	
+	<div data-sly-resource="${@path='par', resourceType='foundation/components/parsys'}"></div>
+	  	
+</form>
