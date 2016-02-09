@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root 
+	xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+	xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+	xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"    
+    jcr:primaryType="cq:Template"
+    jcr:title="Hello World - Output Template"
+    jcr:description="Template of Output Page for Hello World project. Recommended english name is 'output'"
+    allowedPaths="[/content(/.*)?]"
+    allowedParents="[/apps/sightly-example-helloworld/templates/languageRootTemplate]"    
+    ranking="{Long}1">
+    
+    <jcr:content
+    	cq:designPath="/etc/designs/sightly-example-helloworld"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="sightly-example-helloworld/renderers/outputRenderer">
+    	<par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+        </par>    
+    </jcr:content>            
+</jcr:root>
