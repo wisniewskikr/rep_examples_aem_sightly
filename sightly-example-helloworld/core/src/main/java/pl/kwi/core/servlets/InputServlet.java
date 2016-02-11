@@ -26,27 +26,29 @@ public class InputServlet extends SlingAllMethodsServlet {
 	protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
 
 		
-		String errorMessage = getErrorMessage(request);
-		if(errorMessage != null) {
-			String currentPagePath = request.getParameter("currentPagePath");
-			String path = request.getResourceResolver().map(currentPagePath);
-			response.sendRedirect(path + ".html" + errorMessage);
-			return;
-		}
+		System.out.println("---HERE");
 		
-		String path = null;
-		
-		try {
-			
-			String submitTarget = request.getParameter("submitTarget");
-			path = request.getResourceResolver().map(submitTarget) + ".html";
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}		
-		
-		String name = request.getParameter("name");
-		response.sendRedirect(path + "?name=" + name);
+//		String errorMessage = getErrorMessage(request);
+//		if(errorMessage != null) {
+//			String currentPagePath = request.getParameter("currentPagePath");
+//			String path = request.getResourceResolver().map(currentPagePath);
+//			response.sendRedirect(path + ".html" + errorMessage);
+//			return;
+//		}
+//		
+//		String path = null;
+//		
+//		try {
+//			
+//			String submitTarget = request.getParameter("submitTarget");
+//			path = request.getResourceResolver().map(submitTarget) + ".html";
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}		
+//		
+//		String name = request.getParameter("name");
+//		response.sendRedirect(path + "?name=" + name);
 		
 	}
 	
