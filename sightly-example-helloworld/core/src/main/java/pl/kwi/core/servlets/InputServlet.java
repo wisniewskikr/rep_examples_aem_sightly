@@ -36,19 +36,19 @@ public class InputServlet extends SlingAllMethodsServlet {
 //			return;
 //		}
 //		
-//		String path = null;
-//		
-//		try {
-//			
-//			String submitTarget = request.getParameter("submitTarget");
-//			path = request.getResourceResolver().map(submitTarget) + ".html";
-//			
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}		
-//		
-//		String name = request.getParameter("name");
-//		response.sendRedirect(path + "?name=" + name);
+		String path = null;
+		
+		try {
+			
+			String submitTarget = request.getParameter("submitTarget");
+			path = request.getResourceResolver().map(submitTarget) + ".html";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		
+		String name = request.getParameter("name");
+		response.sendRedirect(path + "?name=" + name);
 		
 	}
 	
