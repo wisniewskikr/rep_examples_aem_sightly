@@ -1,0 +1,14 @@
+<div data-sly-use.model="pl.kwi.core.models.InputContentModel" class="content">
+
+	<input type="hidden" id="currentPagePath" name="currentPagePath" value="${model.currentPagePath}"/>
+
+	<div class="contentElementInput">
+		<div class="text">
+			${model.textName} * 
+			<span data-sly-test="${model.errorField == 'name'}" class="error" id="nameErrorMessage">${model.nameErrorMessage}</span>
+		</div>
+		<div class="input"><input type="text" id="name" name="name"/></div>
+		<div class="description" id="nameDescription">${model.nameDescription}</div>
+	</div>
+	
+</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Content Input"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">       
+        <nameText
+            fieldLabel="Text 'Name'"                       
+            name="./textName"
+            jcr:primaryType="cq:Widget"
+            xtype="textfield" />
+         <nameDescription
+            fieldLabel="Field 'Name' description"                       
+            name="./nameDescription"
+            jcr:primaryType="cq:Widget"
+            xtype="textfield" />     
+         <nameErrorMessage
+            fieldLabel="Field 'Name' error message"                       
+            name="./nameErrorMessage"
+            jcr:primaryType="cq:Widget"
+            xtype="textfield" />                                                
+    </items>
+</jcr:root>
