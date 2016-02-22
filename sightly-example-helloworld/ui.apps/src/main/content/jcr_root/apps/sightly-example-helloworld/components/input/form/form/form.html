@@ -5,15 +5,13 @@
 		Please fill mandatory form`s field: "Submit target"			
 	</div>
 	
-	<!-- c:set var="modelContent" value="<%=FormUtil.getModelWithResultComponentExist(resource, "formParsys/content")%>"/>                 
-	<c:if test="${!modelContent.componentExists}">
-		<div class="errorMessages">Please add mandatory form`s component: "Form - Content"</div>
-	</c:if>
+	<sly data-sly-use.formUtil="${'pl.kwi.core.utils.FormUtil' @ componentPath='parsys/content'}">                 
+		<div data-sly-test="${!formUtil.componentExists}" class="errorMessages">Please add mandatory form`s component: "Form - Content"</div>
+	</sly>
 	
-	<c:set var="modelSubmit" value="<%=FormUtil.getModelWithResultComponentExist(resource, "formParsys/submit")%>"/>                 
-	<c:if test="${!modelSubmit.componentExists}">
-		<div class="errorMessages">Please add mandatory form`s component: "Form - Submit button"</div>
-	</c:if -->	 
+	<sly data-sly-use.formUtil="${'pl.kwi.core.utils.FormUtil' @ componentPath='parsys/submit'}">                 
+		<div data-sly-test="${!formUtil.componentExists}" class="errorMessages">Please add mandatory form`s component: "Form - Submit button"</div>
+	</sly>
 	
 	<div data-sly-resource="${@path='parsys', resourceType='wcm/foundation/components/parsys'}"></div>
 	  	
