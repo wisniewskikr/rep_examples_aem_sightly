@@ -1,5 +1,6 @@
 <form data-sly-use.model="pl.kwi.core.models.InputFormModel" method="POST" action="servlet.INPUT.html">
 	<input type="hidden" name="submitTarget" value="${model.submitTarget}"/>
+	<input type="hidden" id="currentPagePath" name="currentPagePath" value="${currentPage.path}"/>
 	
 	<div data-sly-test="${!model.submitTarget}" class="errorMessages">
 		Please fill mandatory form`s field: "Submit target"			

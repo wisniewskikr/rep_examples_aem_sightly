@@ -1,16 +1,16 @@
 package pl.kwi.core.models;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
-
-import com.adobe.cq.sightly.WCMUse;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 
 @Model(adaptables=SlingHttpServletRequest.class)
-public class InputContentModel extends WCMUse{
+public class InputContentModel{
 		
 	
 	@Inject @Via("resource")
@@ -22,15 +22,15 @@ public class InputContentModel extends WCMUse{
 	@Inject @Via("resource")
 	private String nameDescription;
 	
-	private String currentPagePath;
+	@SlingObject
+	protected SlingHttpServletRequest request;
 	
 	private String errorField;
 	
 	
-	@Override
-	public void activate() throws Exception {
-		currentPagePath = getCurrentPage().getPath();
-		errorField = getRequest().getParameter("errorField");
+	@PostConstruct
+	public void init() {		
+		errorField = request.getParameter("errorField");
 	}
 
 	
@@ -44,10 +44,6 @@ public class InputContentModel extends WCMUse{
 
 	public String getNameDescription() {
 		return nameDescription;
-	}
-
-	public String getCurrentPagePath() {
-		return currentPagePath;
 	}
 
 	public String getErrorField() {

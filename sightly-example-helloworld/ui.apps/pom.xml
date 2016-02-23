@@ -201,9 +201,15 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
+        <!-- dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>
+        </dependency -->
+        
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
         </dependency>
 
         <dependency>

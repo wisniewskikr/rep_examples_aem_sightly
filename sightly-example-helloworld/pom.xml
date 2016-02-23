@@ -422,11 +422,18 @@
                 <scope>provided</scope>
             </dependency>
             <!-- Apache Sling Dependencies -->
-            <dependency>
+            <!-- dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>aem-api</artifactId>
                 <version>6.0.0.1</version>
                 <scope>provided</scope>
+            </dependency -->
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>uber-jar</artifactId>
+                <version>6.1.0</version>
+                <scope>provided</scope>
+                <classifier>apis</classifier>
             </dependency>
             
             <dependency>
@@ -434,7 +441,7 @@
                 <artifactId>org.apache.sling.models.api</artifactId>
                 <version>1.0.0</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>            
 
             <!-- Servlet API -->
             <dependency>

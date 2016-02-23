@@ -106,10 +106,16 @@
             <scope>provided</scope>
         </dependency>
         
-        <dependency>
+        <!-- dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>
             <scope>provided</scope>
+        </dependency -->
+        
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
         </dependency>
     </dependencies>
 </project>

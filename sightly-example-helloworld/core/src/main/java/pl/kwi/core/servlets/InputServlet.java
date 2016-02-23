@@ -24,18 +24,18 @@ public class InputServlet extends SlingAllMethodsServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
-
 		
-		System.out.println("---HERE");
+		String errorMessage = getErrorMessage(request);
+		if(errorMessage != null) {
+			String currentPagePath = request.getParameter("currentPagePath");
+			String path = request.getResourceResolver().map(currentPagePath);
+			
+			System.out.println(path + ".html" + errorMessage);
+			
+			response.sendRedirect(path + ".html" + errorMessage);
+			return;
+		}
 		
-//		String errorMessage = getErrorMessage(request);
-//		if(errorMessage != null) {
-//			String currentPagePath = request.getParameter("currentPagePath");
-//			String path = request.getResourceResolver().map(currentPagePath);
-//			response.sendRedirect(path + ".html" + errorMessage);
-//			return;
-//		}
-//		
 		String path = null;
 		
 		try {
