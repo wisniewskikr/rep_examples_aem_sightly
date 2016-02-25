@@ -7,7 +7,7 @@ $(function() {
  * 
  * @param cqTarget String with redirection target
  */
-function goTo(cqTarget) {
+function goTo(cqTarget) {	
 	var target = cqTarget + ".html";
 	window.location=target;
 }
