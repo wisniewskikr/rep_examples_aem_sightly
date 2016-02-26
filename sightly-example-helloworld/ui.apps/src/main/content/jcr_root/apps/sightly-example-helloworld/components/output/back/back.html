@@ -1,5 +1,5 @@
 <div data-sly-use.model="pl.kwi.core.models.OutputBackModel" class="buttons">
-	<input type="button" onclick="goTo('${model.backTarget}');" id="back" name="back" value="${model.textBack}" title="${model.backHint}"/>
+	<input type="button" onclick="goTo('${model.backTarget @ context='scriptString'}');" id="back" name="back" value="${model.textBack}" title="${model.backHint}"/>
 	
 	<sly data-sly-test="${model.backTargetEmpty}">
 		<div class="errorMessages">
