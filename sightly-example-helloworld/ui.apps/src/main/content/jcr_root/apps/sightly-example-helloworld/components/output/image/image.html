@@ -1,0 +1,8 @@
+<div data-sly-use.model="pl.kwi.core.models.OutputImageModel" class="helloImage">
+	<sly data-sly-test="${model.fileReference}">
+		<img id="duke" alt="duke" src="${model.fileReference}">
+	</sly>
+	<sly data-sly-test="${!model.fileReference}">
+		<img id="duke" alt="duke" src="/apps/sightly-example-helloworld/components/output/image/duke.jpg">
+	</sly>
+</div>
